@@ -1,0 +1,36 @@
+{
+    "valueCoding": {
+        "code": 0,
+        "display": "Ich weiss es nicht / Ich erinnere mich nicht",
+        "_display": {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                        {
+                            "url": "lang",
+                            "valueCode": "de"
+                        },
+                        {
+                            "url": "content",
+                            "valueString": "Ich weiss es nicht / Ich erinnere mich nicht"
+                        }
+                    ]
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                        {
+                            "url": "lang",
+                            "valueCode": "fr"
+                        },
+                        {
+                            "url": "content",
+                            "valueString": "Je ne sais pas / je ne m’en souviens plus"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
