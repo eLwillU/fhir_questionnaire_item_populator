@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="ba_resource_script" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="ba_resource_script" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="fhir_questionnaire_item_populator" project-jdk-type="Python SDK" />
 </project>
