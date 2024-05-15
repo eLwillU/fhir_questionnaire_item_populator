@@ -1,8 +1,9 @@
-{
-    "valueCoding": {
-        "code": 0,
-        "display": "Ich weiss es nicht / Ich erinnere mich nicht",
-        "_display": {
+[
+    {
+        "linkId": 1,
+        "prefix": 1,
+        "text": "Wie oft waren Sie wegen der durch die Krebserkrankung verursachten Symptome bei einem/r Hausarzt/-ärztin oder Allgemeinarzt/-ärztin, bevor Sie eine:n Spezialisten/-in konsultiert haben?",
+        "_text": {
             "extension": [
                 {
                     "url": "http://hl7.org/fhir/StructureDefinition/translation",
@@ -13,7 +14,7 @@
                         },
                         {
                             "url": "content",
-                            "valueString": "Ich weiss es nicht / Ich erinnere mich nicht"
+                            "valueString": "Wie oft waren Sie wegen der durch die Krebserkrankung verursachten Symptome bei einem/r Hausarzt/-ärztin oder Allgemeinarzt/-ärztin, bevor Sie eine:n Spezialisten/-in konsultiert haben?"
                         }
                     ]
                 },
@@ -26,11 +27,666 @@
                         },
                         {
                             "url": "content",
-                            "valueString": "Je ne sais pas / je ne m’en souviens plus"
+                            "valueString": "Combien de fois avez-vous vu un∙e médecin de famille / généraliste pour les symptômes causés par le cancer avant de voir un·e médecin spécialiste ?"
                         }
                     ]
                 }
             ]
-        }
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+            {
+                "valueCoding": {
+                    "code": 0,
+                    "display": "Nie – Ich bin direkt zu einem/r Spezialisten/-in gegangen",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Nie – Ich bin direkt zu einem/r Spezialisten/-in gegangen"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Aucune fois – Je suis allé·e directement voir un·e médecin spécialiste"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 1,
+                    "display": "Nie – Ich hatte keine Symptome und der Krebs wurde im Rahmen einer Routine-/ Nachuntersuchung oder bei einer Vorsorge-untersuchung entdeckt",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Nie – Ich hatte keine Symptome und der Krebs wurde im Rahmen einer Routine-/ Nachuntersuchung oder bei einer Vorsorge-untersuchung entdeckt"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Aucune fois – Je n’ai pas eu de symptômes et le cancer a été dépisté lors d’un examen de routine ou de suivi ou dans le cadre d’un programme de dépistage"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 2,
+                    "display": "Ich war 1 oder 2 Mal bei einem/r Arzt/Ärztin",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich war 1 oder 2 Mal bei einem/r Arzt/Ärztin"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’ai vu un·e médecin 1 ou 2 fois"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 3,
+                    "display": "Ich war 3 oder 4 Mal bei einem/r Arzt/Ärztin",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich war 3 oder 4 Mal bei einem/r Arzt/Ärztin"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’ai vu un·e médecin 3 ou 4 fois"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 4,
+                    "display": "Ich war 5 oder mehr Mal bei einem/r Arzt/ Ärztin",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich war 5 oder mehr Mal bei einem/r Arzt/ Ärztin"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’ai vu un·e médecin 5 fois ou plus"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 5,
+                    "display": "Ich weiss es nicht / Ich erinnere mich nicht",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich weiss es nicht / Ich erinnere mich nicht"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Je ne sais pas / je ne m’en souviens plus"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "linkId": 2,
+        "prefix": 2,
+        "text": "Wie empfanden Sie die Wartezeit vor dem ersten Termin bei einem Spezialisten?",
+        "_text": {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                        {
+                            "url": "lang",
+                            "valueCode": "de"
+                        },
+                        {
+                            "url": "content",
+                            "valueString": "Wie empfanden Sie die Wartezeit vor dem ersten Termin bei einem Spezialisten?"
+                        }
+                    ]
+                },
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                        {
+                            "url": "lang",
+                            "valueCode": "fr"
+                        },
+                        {
+                            "url": "content",
+                            "valueString": "Que pensez-vous de la période d’attente avant votre premier rendez-vous avec un·e médecin spécialiste ?"
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+            {
+                "valueCoding": {
+                    "code": 0,
+                    "display": "Nie – Ich bin direkt zu einem/r Spezialisten/-in gegangen",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Nie – Ich bin direkt zu einem/r Spezialisten/-in gegangen"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Aucune fois – Je suis allé·e directement voir un·e médecin spécialiste"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 1,
+                    "display": "Nie – Ich hatte keine Symptome und der Krebs wurde im Rahmen einer Routine-/ Nachuntersuchung oder bei einer Vorsorge-untersuchung entdeckt",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Nie – Ich hatte keine Symptome und der Krebs wurde im Rahmen einer Routine-/ Nachuntersuchung oder bei einer Vorsorge-untersuchung entdeckt"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Aucune fois – Je n’ai pas eu de symptômes et le cancer a été dépisté lors d’un examen de routine ou de suivi ou dans le cadre d’un programme de dépistage"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 2,
+                    "display": "Ich war 1 oder 2 Mal bei einem/r Arzt/Ärztin",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich war 1 oder 2 Mal bei einem/r Arzt/Ärztin"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’ai vu un·e médecin 1 ou 2 fois"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 3,
+                    "display": "Ich war 3 oder 4 Mal bei einem/r Arzt/Ärztin",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich war 3 oder 4 Mal bei einem/r Arzt/Ärztin"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’ai vu un·e médecin 3 ou 4 fois"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 4,
+                    "display": "Ich war 5 oder mehr Mal bei einem/r Arzt/ Ärztin",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich war 5 oder mehr Mal bei einem/r Arzt/ Ärztin"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’ai vu un·e médecin 5 fois ou plus"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 5,
+                    "display": "Ich weiss es nicht / Ich erinnere mich nicht",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich weiss es nicht / Ich erinnere mich nicht"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Je ne sais pas / je ne m’en souviens plus"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 0,
+                    "display": "Ich bekam einen Termin, sobald mir dies notwendig erschien",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich bekam einen Termin, sobald mir dies notwendig erschien"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’ai été vu·e dès que cela m’a semblé nécessaire"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 1,
+                    "display": "Ich hätte etwas früher einen Termin bekommen müssen",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich hätte etwas früher einen Termin bekommen müssen"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’aurais dû être vu·e un peu plus tôt"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 2,
+                    "display": "Ich hätte viel früher einen Termin bekommen müssen",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich hätte viel früher einen Termin bekommen müssen"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "J’aurais dû être vu·e beaucoup plus tôt"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 3,
+                    "display": "Es gab keine Wartezeit, da ich keinen Termin vereinbart habe (z. B. Notfall)",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Es gab keine Wartezeit, da ich keinen Termin vereinbart habe (z. B. Notfall)"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Je n’ai pas eu d’attente car je n’ai pas pris de rendez-vous (par ex. consultation en urgence)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "valueCoding": {
+                    "code": 4,
+                    "display": "Ich weiss es nicht / Ich erinnere mich nicht",
+                    "_display": {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "de"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Ich weiss es nicht / Ich erinnere mich nicht"
+                                    }
+                                ]
+                            },
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                                "extension": [
+                                    {
+                                        "url": "lang",
+                                        "valueCode": "fr"
+                                    },
+                                    {
+                                        "url": "content",
+                                        "valueString": "Je ne sais pas / je ne m’en souviens plus"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
     }
-}
+]
