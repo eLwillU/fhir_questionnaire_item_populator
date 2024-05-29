@@ -7,7 +7,6 @@ def create_question_title(link_id, prefix, question_text_de, question_text_fr):
         "linkId": link_id.strip(),
         "prefix": prefix.strip(),
         "text": question_text_de.strip(),
-        "enableWhen": [],
         "_text": {
             "extension": [
                 {
