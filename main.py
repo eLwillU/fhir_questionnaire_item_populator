@@ -1,123 +1,36 @@
 import pandas as pd
-import json
 
-def createquetiontitle(linkid, prefix, question_text_de, question_text_fr):
-    templatequestiontitle = {
-        "linkId": linkid,
-        "prefix": prefix,
-        "text": question_text_de,
-        "_text": {
-            "extension": [
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                    "extension": [
-                        {
-                            "url": "lang",
-                            "valueCode": "de"
-                        },
-                        {
-                            "url": "content",
-                            "valueString": question_text_de
-                        }
-                    ]
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                    "extension": [
-                        {
-                            "url": "lang",
-                            "valueCode": "fr"
-                        },
-                        {
-                            "url": "content",
-                            "valueString": question_text_fr
-                        }
-                    ]
-                }
-            ]
-        },
-        "type": "choice",
-        "required": True,
-        "answerOption": []
-    }
-    return templatequestiontitle
+from functions import createansweroption, writetojson, read_language_sheet, createquetiontitle
 
+# reading the data
+file = pd.ExcelFile('data/data.xlsx')
+df_german = read_language_sheet(file, "german")
+df_french = read_language_sheet(file, "french")
 
-def createansweroption(answer_text_de, answer_text_fr, code):
-    answeroption = {
-        "valueCoding": {
-            "code": code,
-            "display": answer_text_de,
-            "_display": {
-                "extension": [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                        "extension": [
-                            {
-                                "url": "lang",
-                                "valueCode": "de"
-                            },
-                            {
-                                "url": "content",
-                                "valueString": answer_text_de
-                            }
-                        ]
-                    },
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                        "extension": [
-                            {
-                                "url": "lang",
-                                "valueCode": "fr"
-                            },
-                            {
-                                "url": "content",
-                                "valueString": answer_text_fr
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-    }
-    return answeroption
-
-
-def writetojson(jsondata):
-    with open('data.json', 'a', encoding='utf-8') as f:
-        # Serialize the data and write it to the file
-        json.dump(jsondata, f, ensure_ascii=False, indent=4)
-
-
-df = pd.read_excel('data/data.xlsx',
-                   dtype={"linkid": int,
-                          "prefix": int,
-                          "numAnswers": int},
-                   na_values=["NA"])
+# Creating and saving the data
 res = []
-options = []
-
-for index, row in df.iterrows():
-    juan = createquetiontitle(linkid=row["linkid"], prefix=row["prefix"], question_text_de=row["question_text_de"],
-                              question_text_fr=row["question_text_fr"])
-
-    german_value = ""
-    french_value = ""
+for index, row in df_german.iterrows():
     counter = 0
-    num_answers_value = row["numAnswers"]
+    german_value = df_german.loc[index, "question_text_de"]
+    german_row = df_german.loc[index]
 
-    for i, (german, french) in enumerate(zip(row[6:], row.iloc[6 + num_answers_value:])):
-        if i == num_answers_value:
-            break
-        if pd.notna(german):
-            german_value = german
-        if pd.notna(french):
-            french_value = french
-        juan_son = createansweroption(answer_text_de=german_value, answer_text_fr=french_value, code=counter)
-        counter += 1
-        options.append(juan_son)
+    french_value = df_french.loc[index, "question_text_fr"]
+    french_row = df_french.loc[index]
+    options = []
 
-    juan["answerOption"].extend(options)
-    res.append(juan)
+    title = createquetiontitle(linkid=row["linkid"], prefix=row["prefix"], question_text_de=german_value,
+                               question_text_fr=french_value)
+
+    for i, element in german_row[5:].items():
+        if pd.notna(element):
+            german_answer = element
+            french_answer = french_row[i]
+
+            answerOption = createansweroption(answer_text_de=german_answer, answer_text_fr=french_answer, code=counter)
+            counter += 1
+            options.append(answerOption)
+
+    title["answerOption"].extend(options)
+    res.append(title)
 
 writetojson(res)
