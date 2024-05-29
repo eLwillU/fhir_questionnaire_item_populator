@@ -1,6 +1,6 @@
 import pandas as pd
 
-from functions import createansweroption, writetojson, read_language_sheet, createquetiontitle
+from functions import create_answer_option, write_to_json, read_language_sheet, create_question_title
 
 # reading the data
 file = pd.ExcelFile('data/data.xlsx')
@@ -18,19 +18,20 @@ for index, row in df_german.iterrows():
     french_row = df_french.loc[index]
     options = []
 
-    title = createquetiontitle(linkid=row["linkid"], prefix=row["prefix"], question_text_de=german_value,
-                               question_text_fr=french_value)
+    title = create_question_title(link_id=row["linkid"], prefix=row["prefix"], question_text_de=german_value,
+                                  question_text_fr=french_value)
 
     for i, element in german_row[5:].items():
         if pd.notna(element):
             german_answer = element
             french_answer = french_row[i]
 
-            answerOption = createansweroption(answer_text_de=german_answer, answer_text_fr=french_answer, code=counter)
+            answerOption = create_answer_option(answer_text_de=german_answer, answer_text_fr=french_answer,
+                                                code=counter)
             counter += 1
             options.append(answerOption)
 
     title["answerOption"].extend(options)
     res.append(title)
 
-writetojson(res)
+write_to_json(res, "data.json")

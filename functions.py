@@ -1,11 +1,10 @@
 import pandas as pd
 import json
-import pprint as pp
 
 
-def createquetiontitle(linkid, prefix, question_text_de, question_text_fr):
-    templatequestiontitle = {
-        "linkId": linkid.strip(),
+def create_question_title(link_id, prefix, question_text_de, question_text_fr):
+    template_question_title = {
+        "linkId": link_id.strip(),
         "prefix": prefix.strip(),
         "text": question_text_de.strip(),
         "enableWhen": [],
@@ -45,11 +44,11 @@ def createquetiontitle(linkid, prefix, question_text_de, question_text_fr):
 
         ]
     }
-    return templatequestiontitle
+    return template_question_title
 
 
-def createansweroption(answer_text_de, answer_text_fr, code):
-    answeroption = {
+def create_answer_option(answer_text_de, answer_text_fr, code):
+    answer_option = {
         "valueCoding": {
             "code": code,
             "display": answer_text_de.strip(),
@@ -85,13 +84,13 @@ def createansweroption(answer_text_de, answer_text_fr, code):
             }
         }
     }
-    return answeroption
+    return answer_option
 
 
-def writetojson(jsondata):
-    with open('data.json', 'a', encoding='utf-8') as f:
+def write_to_json(json_data, filename):
+    with open(filename, 'a', encoding='utf-8') as f:
         # Serialize the data and write it to the file
-        json.dump(jsondata, f, ensure_ascii=False, indent=4)
+        json.dump(json_data, f, ensure_ascii=False, indent=4)
 
 
 def read_language_sheet(excel_file, sheet_name):
