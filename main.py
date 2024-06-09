@@ -19,7 +19,7 @@ for index, row in df_german.iterrows():
     options = []
 
     title = create_question_title(link_id=row["linkid"], prefix=row["prefix"], question_text_de=german_value,
-                                  question_text_fr=french_value)
+                                  question_text_fr=french_value, enable_when=row["enableWhenBlock?"])
 
     for i, element in german_row[5:].items():
         if pd.notna(element):

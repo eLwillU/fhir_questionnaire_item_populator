@@ -2,47 +2,98 @@ import pandas as pd
 import json
 
 
-def create_question_title(link_id, prefix, question_text_de, question_text_fr):
-    template_question_title = {
-        "linkId": link_id.strip(),
-        "prefix": prefix.strip(),
-        "text": question_text_de.strip(),
-        "_text": {
-            "extension": [
+def create_question_title(link_id, prefix, question_text_de, question_text_fr, enable_when=False):
+    if enable_when:
+        template_question_title = {
+            "linkId": link_id.strip(),
+            "prefix": prefix.strip(),
+            "text": question_text_de.strip(),
+            "enableWhen": [
                 {
-                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                    "extension": [
-                        {
-                            "url": "lang",
-                            "valueCode": "de"
-                        },
-                        {
-                            "url": "content",
-                            "valueString": question_text_de.strip()
-                        }
-                    ]
-                },
-                {
-                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
-                    "extension": [
-                        {
-                            "url": "lang",
-                            "valueCode": "fr"
-                        },
-                        {
-                            "url": "content",
-                            "valueString": question_text_fr.strip()
-                        }
-                    ]
+                    "question": "3",
+                    "operator": "=",
+                    "answerCoding": {
+                        "code": 0
+                    }
                 }
-            ]
-        },
-        "type": "choice",
-        "required": True,
-        "answerOption": [
+            ],
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": question_text_de.strip()
+                            }
+                        ]
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "fr"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": question_text_fr.strip()
+                            }
+                        ]
+                    }
+                ]
+            },
+            "type": "choice",
+            "required": True,
+            "answerOption": [
 
-        ]
-    }
+            ]
+        }
+    else:
+        template_question_title = {
+            "linkId": link_id.strip(),
+            "prefix": prefix.strip(),
+            "text": question_text_de.strip(),
+            "_text": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "de"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": question_text_de.strip()
+                            }
+                        ]
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                            {
+                                "url": "lang",
+                                "valueCode": "fr"
+                            },
+                            {
+                                "url": "content",
+                                "valueString": question_text_fr.strip()
+                            }
+                        ]
+                    }
+                ]
+            },
+            "type": "choice",
+            "required": True,
+            "answerOption": [
+
+            ]
+        }
     return template_question_title
 
 
