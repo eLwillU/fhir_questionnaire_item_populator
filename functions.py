@@ -101,7 +101,7 @@ def create_answer_option(answer_text_de, answer_text_fr, code):
     answer_option = {
         "valueCoding": {
             "code": code,
-            "display": answer_text_de.strip(),
+            "display": str(answer_text_de).strip(),
             "_display": {
                 "extension": [
                     {
@@ -113,7 +113,7 @@ def create_answer_option(answer_text_de, answer_text_fr, code):
                             },
                             {
                                 "url": "content",
-                                "valueString": answer_text_de.strip()
+                                "valueString": str(answer_text_de).strip()
                             }
                         ]
                     },
@@ -126,7 +126,7 @@ def create_answer_option(answer_text_de, answer_text_fr, code):
                             },
                             {
                                 "url": "content",
-                                "valueString": answer_text_fr.strip()
+                                "valueString": str(answer_text_fr).strip()
                             }
                         ]
                     }
