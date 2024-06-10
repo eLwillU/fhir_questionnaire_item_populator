@@ -1,0 +1,3654 @@
+[
+  {
+    "linkId": "SCAPE-42",
+    "prefix": "42",
+    "text": "Welche Art(en) von Krebsbehandlung haben Sie in den letzten 12 Monaten erhalten? (Wählen Sie alles an, was zutrifft.)",
+    "_text": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/translation",
+          "extension": [
+            {
+              "url": "lang",
+              "valueCode": "de"
+            },
+            {
+              "url": "content",
+              "valueString": "Welche Art(en) von Krebsbehandlung haben Sie in den letzten 12 Monaten erhalten? (Wählen Sie alles an, was zutrifft.)"
+            }
+          ]
+        },
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/translation",
+          "extension": [
+            {
+              "url": "lang",
+              "valueCode": "fr"
+            },
+            {
+              "url": "content",
+              "valueString": "Au cours des 12 derniers mois, quel(s) type(s) de traitement avez-vous reçu(s) contre le cancer ? (Cochez tout ce qui s’applique.)"
+            }
+          ]
+        }
+      ]
+    },
+    "type": "choice",
+    "required": true,
+    "answerOption": [
+      {
+        "valueCoding": {
+          "code": "0",
+          "display": "Ich habe meine Behandlung(en) vor mehr als 12 Monaten erhalten",
+          "_display": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "de"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "Ich habe meine Behandlung(en) vor mehr als 12 Monaten erhalten"
+                  }
+                ]
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "J'ai reçu mon/mes traitement(s) il y a plus de 12 mois"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "valueCoding": {
+          "code": "1",
+          "display": "Ich habe noch keine Behandlung erhalten",
+          "_display": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "de"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "Ich habe noch keine Behandlung erhalten"
+                  }
+                ]
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                "extension": [
+                  {
+                    "url": "lang",
+                    "valueCode": "fr"
+                  },
+                  {
+                    "url": "content",
+                    "valueString": "Je ne sais pas"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "item": [
+      {
+        "linkId": "SCAPE-42.1",
+        "prefix": "42.1",
+        "enableBehavior": "all",
+        "enableWhen": [
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "0"
+            }
+          },
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "1"
+            }
+          }
+        ],
+        "text": "Chirurgie",
+        "_text": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Chirurgie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Chirurgie"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+          {
+            "valueCoding": {
+              "code": "0",
+              "display": "Ja",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Ja"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Oui"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "valueCoding": {
+              "code": "1",
+              "display": "Nein",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Nein"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Non"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "item": [
+          {
+            "linkId": "SCAPE-42.1.1",
+            "prefix": "42.1.1",
+            "text": "Chirurgie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.1",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chirurgie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chirurgie : avez-vous reçu toutes les informations dont vous aviez besoin à ce sujet avant le traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.1.2",
+            "prefix": "42.1.2",
+            "text": "Chirurgie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.1",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chirurgie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chirurgie, vous a-t-on proposé des conseils pratiques et/ou un soutien pour gérer les effets secondaires du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein, aber ich hätte gerne welche gehabt",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein, aber ich hätte gerne welche gehabt"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, mais j’aurais aimé qu’on m’en propose"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.1.3",
+            "prefix": "42.1.3",
+            "text": "Chirurgie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.1",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chirurgie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chirurgie : avez-vous reçu des informations compréhensibles sur les effets du traitement après son début ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, je n’ai pas compris les informations"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "SCAPE-42.2",
+        "prefix": "42.2",
+        "enableBehavior": "all",
+        "enableWhen": [
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "0"
+            }
+          },
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "1"
+            }
+          }
+        ],
+        "text": "Chemotherapie",
+        "_text": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Chemotherapie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Chimiothérapie"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+          {
+            "valueCoding": {
+              "code": "0",
+              "display": "Ja",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Ja"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Oui"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "valueCoding": {
+              "code": "1",
+              "display": "Nein",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Nein"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Non"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "item": [
+          {
+            "linkId": "SCAPE-42.2.1",
+            "prefix": "42.2.1",
+            "text": "Chemotherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.2",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chemotherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chimiothérapie : avez-vous reçu toutes les informations dont vous aviez besoin à ce sujet avant le traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.2.2",
+            "prefix": "42.2.2",
+            "text": "Chemotherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.2",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chemotherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chimiothérapie, vous a-t-on proposé des conseils pratiques et/ou un soutien pour faire face aux effets secondaires du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein, aber ich hätte gerne welche gehabt",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein, aber ich hätte gerne welche gehabt"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, mais j’aurais aimé qu’on m’en propose"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.2.3",
+            "prefix": "42.2.3",
+            "text": "Chemotherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.2",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chemotherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Chimiothérapie : avez-vous reçu des informations compréhensibles sur ses effets après le début du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, je n’ai pas compris les informations"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "SCAPE-42.3",
+        "prefix": "42.3",
+        "enableBehavior": "all",
+        "enableWhen": [
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "0"
+            }
+          },
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "1"
+            }
+          }
+        ],
+        "text": "Strahlentherapie",
+        "_text": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Strahlentherapie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Radiothérapie"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+          {
+            "valueCoding": {
+              "code": "0",
+              "display": "Ja",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Ja"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Oui"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "valueCoding": {
+              "code": "1",
+              "display": "Nein",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Nein"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Non"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "item": [
+          {
+            "linkId": "SCAPE-42.3.1",
+            "prefix": "42.3.1",
+            "text": "Strahlentherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.3",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Strahlentherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Radiothérapie : avez-vous reçu toutes les informations dont vous aviez besoin à ce sujet avant le traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.3.2",
+            "prefix": "42.3.2",
+            "text": "Strahlentherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.3",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Strahlentherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Radiothérapie, vous a-t-on proposé des conseils pratiques et/ou un soutien pour gérer les effets secondaires du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein, aber ich hätte gerne welche gehabt",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein, aber ich hätte gerne welche gehabt"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, mais j’aurais aimé qu’on m’en propose"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.3.3",
+            "prefix": "42.3.3",
+            "text": "Strahlentherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.3",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Strahlentherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Radiothérapie : avez-vous reçu des informations compréhensibles sur ses effets après le début du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, je n’ai pas compris les informations"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "SCAPE-42.4",
+        "prefix": "42.4",
+        "enableBehavior": "all",
+        "enableWhen": [
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "0"
+            }
+          },
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "1"
+            }
+          }
+        ],
+        "text": "Hormontherapie",
+        "_text": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Hormontherapie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Hormonothérapie"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+          {
+            "valueCoding": {
+              "code": "0",
+              "display": "Ja",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Ja"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Oui"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "valueCoding": {
+              "code": "1",
+              "display": "Nein",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Nein"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Non"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "item": [
+          {
+            "linkId": "SCAPE-42.4.1",
+            "prefix": "42.4.1",
+            "text": "Hormontherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.4",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Hormontherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Hormonothérapie : avez-vous reçu toutes les informations dont vous aviez besoin à ce sujet avant le traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.4.2",
+            "prefix": "42.4.2",
+            "text": "Hormontherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.4",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Hormontherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Hormonothérapie, vous a-t-on proposé des conseils pratiques et/ou un soutien pour gérer les effets secondaires du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein, aber ich hätte gerne welche gehabt",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein, aber ich hätte gerne welche gehabt"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, mais j’aurais aimé qu’on m’en propose"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.4.3",
+            "prefix": "42.4.3",
+            "text": "Hormontherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.4",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Hormontherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Hormonothérapie : avez-vous reçu des informations compréhensibles sur ses effets après le début du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, je n’ai pas compris les informations"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "SCAPE-42.5",
+        "prefix": "42.5",
+        "enableBehavior": "all",
+        "enableWhen": [
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "0"
+            }
+          },
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "1"
+            }
+          }
+        ],
+        "text": "Immuntherapie",
+        "_text": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Immuntherapie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Immunothérapie"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+          {
+            "valueCoding": {
+              "code": "0",
+              "display": "Ja",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Ja"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Oui"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "valueCoding": {
+              "code": "1",
+              "display": "Nein",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Nein"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Non"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "item": [
+          {
+            "linkId": "SCAPE-42.5.1",
+            "prefix": "42.5.1",
+            "text": "Immuntherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.5",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Immuntherapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Immunothérapie : avez-vous reçu toutes les informations dont vous aviez besoin à ce sujet avant le traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.5.2",
+            "prefix": "42.5.2",
+            "text": "Immuntherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.5",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Immuntherapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Immunothérapie, vous a-t-on proposé des conseils pratiques et/ou un soutien pour gérer les effets secondaires du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein, aber ich hätte gerne welche gehabt",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein, aber ich hätte gerne welche gehabt"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, mais j’aurais aimé qu’on m’en propose"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.5.3",
+            "prefix": "42.5.3",
+            "text": "Immuntherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.5",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Immuntherapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Immunothérapie : avez-vous reçu des informations compréhensibles sur ses effets après le début du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, je n’ai pas compris les informations"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "SCAPE-42.6",
+        "prefix": "42.6",
+        "enableBehavior": "all",
+        "enableWhen": [
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "0"
+            }
+          },
+          {
+            "question": "SCAPE-42",
+            "operator": "!=",
+            "answerCoding": {
+              "code": "1"
+            }
+          }
+        ],
+        "text": "Zielgerichtete Therapie",
+        "_text": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Zielgerichtete Therapie"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Thérapie ciblée"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+          {
+            "valueCoding": {
+              "code": "0",
+              "display": "Ja",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Ja"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Oui"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "valueCoding": {
+              "code": "1",
+              "display": "Nein",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Nein"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Non"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "item": [
+          {
+            "linkId": "SCAPE-42.6.1",
+            "prefix": "42.6.1",
+            "text": "Zielgerichtete Therapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.6",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Zielgerichtete Therapie: Haben Sie vor der Behandlung alle Informationen erhalten, die Sie darüber benötigten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Thérapie ciblée : avez-vous reçu toutes les informations dont vous aviez besoin à ce sujet avant le traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.6.2",
+            "prefix": "42.6.2",
+            "text": "Zielgerichtete Therapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.6",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Zielgerichtete Therapie: Hat man Ihnen praktische Ratschläge und/oder Unterstützung für den Umgang mit den Nebenwirkungen der Behandlung angeboten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Thérapie ciblée, vous a-t-on proposé des conseils pratiques et/ou un soutien pour gérer les effets secondaires du traitement ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, tout à fait"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "2",
+                  "display": "Nein, aber ich hätte gerne welche gehabt",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Nein, aber ich hätte gerne welche gehabt"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, mais j’aurais aimé qu’on m’en propose"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "linkId": "SCAPE-42.6.3",
+            "prefix": "42.6.3",
+            "text": "Zielgerichtete Therapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.6",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Zielgerichtete Therapie: Haben Sie nach Beginn der Behandlung verständliche Informationen zu ihrer Wirkung erhalten?"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Thérapie ciblée : avez-vous reçu des informations compréhensibles sur les effets du traitement après son début ?"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "choice",
+            "required": true,
+            "answerOption": [
+              {
+                "valueCoding": {
+                  "code": "0",
+                  "display": "Ja, absolut",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, absolut"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Oui, dans une certaine mesure"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "valueCoding": {
+                  "code": "1",
+                  "display": "Ja, bis zu einem gewissen Grad",
+                  "_display": {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "de"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Ja, bis zu einem gewissen Grad"
+                          }
+                        ]
+                      },
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                        "extension": [
+                          {
+                            "url": "lang",
+                            "valueCode": "fr"
+                          },
+                          {
+                            "url": "content",
+                            "valueString": "Non, je n’ai pas compris les informations"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "linkId": "SCAPE-42.7",
+        "prefix": "42.7",
+        "text": "Andere",
+        "enableWhen": [
+          {
+            "question": "SCAPE-42.7",
+            "operator": "=",
+            "answerCoding": {
+              "code": "0"
+            }
+          }
+        ],
+        "_text": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "de"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Andere"
+                }
+              ]
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/translation",
+              "extension": [
+                {
+                  "url": "lang",
+                  "valueCode": "fr"
+                },
+                {
+                  "url": "content",
+                  "valueString": "Autre"
+                }
+              ]
+            }
+          ]
+        },
+        "type": "choice",
+        "required": true,
+        "answerOption": [
+          {
+            "valueCoding": {
+              "code": "0",
+              "display": "Ja",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Ja"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Oui"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "valueCoding": {
+              "code": "1",
+              "display": "Nein",
+              "_display": {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "de"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Nein"
+                      }
+                    ]
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                    "extension": [
+                      {
+                        "url": "lang",
+                        "valueCode": "fr"
+                      },
+                      {
+                        "url": "content",
+                        "valueString": "Non"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "item": [
+          {
+            "linkId": "SCAPE-42.7.1",
+            "prefix": "42.7.1",
+            "text": "Andere",
+            "enableWhen": [
+              {
+                "question": "SCAPE-42.7",
+                "operator": "=",
+                "answerCoding": {
+                  "code": "0"
+                }
+              }
+            ],
+            "_text": {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "de"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Andere"
+                    }
+                  ]
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/translation",
+                  "extension": [
+                    {
+                      "url": "lang",
+                      "valueCode": "fr"
+                    },
+                    {
+                      "url": "content",
+                      "valueString": "Autre"
+                    }
+                  ]
+                }
+              ]
+            },
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]
